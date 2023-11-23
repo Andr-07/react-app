@@ -1,11 +1,11 @@
 import { RestaurantCard } from '../../components/restaurant-card/component'
-import { Tab } from '../../components/tab/component'
+import { Tabs } from '../../components/tabs/component'
 
 export const RestaurantsPage = ({ restaurants }) => {
   const names = Array.from(new Set(restaurants.map(({ name }) => name)))
   return (
     <>
-      <Tab names={names} />
+      <Tabs names={names} />
       <RestaurantCard restaurants={restaurants} />
     </>
   )
