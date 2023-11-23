@@ -1,4 +1,4 @@
-export const TopTab = ({ names }) => {
+export const Tab = ({ names }) => {
   return (
     <>
       {names.map((name, key) => (
