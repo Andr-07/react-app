@@ -6,14 +6,14 @@ export const RestaurantsPage = ({ restaurants }) => {
   const names = Array.from(new Set(restaurants.map(({ name }) => name)))
   const [selectedRestaurant, setSelectedRestaurant] = useState()
 
-  const filteredestaurants = restaurants.filter(
+  const filteredestaurant = restaurants.find(
     ({ name }) => name === selectedRestaurant,
   )
 
   return (
     <>
       <Tabs names={names} onRestarauntSelect={setSelectedRestaurant} />
-      <RestaurantCard restaurants={filteredestaurants} />
+      <RestaurantCard restaurant={filteredestaurant} />
     </>
   )
 }
