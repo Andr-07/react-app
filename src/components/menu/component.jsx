@@ -1,29 +1,13 @@
-import { useState } from 'react'
-import { addOrder, reduceOrder } from '../../utils'
+import { Dish } from '../dish/component'
 
-export const Menu = ({ menu }) => {
+export const Menu = ({ dishes }) => {
   return (
     <>
       <h3>Menu</h3>
       <ul>
-        {menu.map((item) => {
-          const [actualCount, setCount] = useState(0)
-
-          return (
-            <li key={item.id}>
-              {item.name} | {item.price + '$'}
-              <span>
-                <button onClick={() => reduceOrder(actualCount, setCount)}>
-                  -
-                </button>
-                {actualCount}
-                <button onClick={() => addOrder(actualCount, setCount)}>
-                  +
-                </button>
-              </span>
-            </li>
-          )
-        })}
+        {dishes.map((dish) => (
+          <Dish dish={dish} />
+        ))}
       </ul>
     </>
   )

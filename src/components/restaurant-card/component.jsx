@@ -7,7 +7,7 @@ export const RestaurantCard = ({ restaurants }) => {
       {restaurants.map((restaurant) => (
         <div key={restaurant.id}>
           <h1>{restaurant.name}</h1>
-          <Menu menu={restaurant.menu}></Menu>
+          <Menu dishes={restaurant.menu}></Menu>
           <Reviews reviews={restaurant.reviews}></Reviews>
         </div>
       ))}

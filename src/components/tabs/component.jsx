@@ -1,4 +1,4 @@
-export const Tabs = ({ names }) => {
+export const Tabs = ({ names, onRestarauntSelect }) => {
   return (
     <>
       {names.map((name, key) => (
