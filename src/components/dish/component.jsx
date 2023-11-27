@@ -9,7 +9,7 @@ export const Dish = ({ dish }) => {
 
   return (
     <>
-      <li key={dish.id}>
+      <div key={dish.id}>
         {dish.name} | {dish.price + '$'}
         <span>
           <button
@@ -26,7 +26,7 @@ export const Dish = ({ dish }) => {
             +
           </button>
         </span>
-      </li>
+      </div>
     </>
   )
 }
